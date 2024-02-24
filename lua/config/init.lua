@@ -11,7 +11,33 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Example using a list of specs with the default options
-vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
+require('config.globals')
+require('config.options')
 
-require("lazy").setup('plugins')
+local opts = {
+	defaults = {
+		lazy = true,
+	},
+	install = {
+		colorscheme = {"tokyonight"}
+	},
+	rtp = {
+      reset = true, -- reset the runtime path to $VIMRUNTIME and your config directory
+      ---@type string[]
+      ---@type string[] list any plugins you want to disable here
+      disabled_plugins = {
+         "gzip",
+         "matchit",
+         "matchparen",
+         "netrwPlugin",
+         "tarPlugin",
+         "tohtml",
+         "tutor",
+         "zipPlugin",
+      },
+    },
+    }
+
+-- Example using a list of specs with the default options
+
+require("lazy").setup('plugins', opts)
