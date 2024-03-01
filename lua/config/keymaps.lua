@@ -19,3 +19,12 @@ vim.keymap.set("n", "<leader>=", "gg=G<C-o>zz") -- ggb
 -- indent
 -- insert mode indent
 vim.keymap.set("i", "<C-d>", "<C-o>>")
+
+-- go
+vim.keymap.set(
+    "n",
+    "<leader>ee",
+    "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
+)
+
+
