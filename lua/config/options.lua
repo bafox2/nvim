@@ -34,3 +34,9 @@ opt.splitbelow = true
 opt.autochdir = false
 opt.mouse:append('a')
 opt.modifiable = true
+
+-- undo
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true

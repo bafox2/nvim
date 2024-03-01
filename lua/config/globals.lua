@@ -4,6 +4,8 @@ vim.g.maplocalleader = " "
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
+local lsp_group = augroup('LspAttach', {})
+local trim_group = augroup('TrimWhitespace', {})
 
 -- yank highlight
 autocmd('TextYankPost', {
@@ -19,14 +21,14 @@ autocmd('TextYankPost', {
 
 -- trim whitespace
 autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
+    group = trim_group,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
 
 
 autocmd('LspAttach', {
-    group = ThePrimeagenGroup,
+    group = lsp_group,
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
