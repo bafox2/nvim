@@ -4,7 +4,7 @@ return {
         "nvim-lua/plenary.nvim",
         "nvim-treesitter/nvim-treesitter",
     },
-    keys = {"<leader>ha"},
+    keys = {"<leader>kk"},
     config = {
         -- an empty table will work for default config
         --- if you use functions, or whichkey, or lazy to map keys
