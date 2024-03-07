@@ -1,4 +1,5 @@
 -- directory nav
+vim.keymap.set("n", "<leader>vmc", "<cmd>e ~/.config/nvim/lua/plugins<CR>");
 
 -- window nav
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -28,4 +29,12 @@ vim.keymap.set(
     "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
 
+-- netrw nav
+vim.keymap.set("n", "<leader>ep", vim.cmd.Ex)
 
+-- find center of screen
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- lame delete buffer
+vim.keymap.set("n", "<leader>bd", ":bd<CR>")
