@@ -38,3 +38,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- lame delete buffer
 vim.keymap.set("n", "<leader>bd", ":bd<CR>")
+
+-- run go tests for current dir
+vim.keymap.set("n", "<leader>t", ":!go test ./...<CR>")
