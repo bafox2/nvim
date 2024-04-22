@@ -30,7 +30,7 @@ vim.keymap.set(
 )
 
 -- netrw nav
-vim.keymap.set("n", "<leader>ep", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>p", vim.cmd.Ex)
 
 -- find center of screen
 vim.keymap.set("n", "n", "nzzzv")
