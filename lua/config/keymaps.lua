@@ -32,6 +32,9 @@ vim.keymap.set(
 -- netrw nav
 vim.keymap.set("n", "<leader>p", vim.cmd.Ex)
 
+-- escape insert mode
+vim.keymap.set("i", "jk", "<Esc>")
+
 -- find center of screen
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
